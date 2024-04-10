@@ -1,0 +1,36 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.page-header {
+  background-color: #FF6900;
+  color: white;
+}
+
+.page-footer {
+  background-color: #1A1A1A;
+  color: white;
+}
+
+.badge {
+  text-align: center;
+  font-weight: 700;
+  color: white;
+}
+
+[class*=discount] {
+  background-color: red;
+}
+
+[class*=sustain] {
+  background-color: green;
+}
+
+.after-disc {
+  color: red;
+}
+
+.before-disc {
+  text-decoration: line-through;
+  font-weight: 400;
+}

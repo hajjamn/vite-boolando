@@ -1,0 +1,12 @@
+.col-4 {
+  max-width: calc(4 * 100% / 12);
+}
+
+.col-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.direction-col {
+  flex-direction: column;
+}
