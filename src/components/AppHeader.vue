@@ -1,3 +1,15 @@
+<script>
+export default {
+  data() {
+    return {
+      menuItems: [
+        'Donna', 'Uomo', 'Bambino'
+      ]
+    }
+  }
+}
+</script>
+
 <template>
 
 <header class="page-header">
@@ -5,9 +17,10 @@
             <nav class="row">
                 <!-- LINKS TO STORE SECTIONS -->
                 <ul class="col-4 col-flex">
-                    <li><a href="#">Donna</a></li>
+<!--                     <li><a href="#">Donna</a></li>
                     <li><a href="#">Uomo</a></li>
-                    <li><a href="#">Bambini</a></li>
+                    <li><a href="#">Bambini</a></li> -->
+                    <li v-for="item in menuItems"><a href="#">{{ item }}</a></li>
                 </ul>
                 <!-- LOGO -->
                 <div class="col=4">
