@@ -1,31 +1,6 @@
-<script>
-</script>
-
 <template>
 
-<header class="page-header">
-        <div class="container">
-            <nav class="row">
-                <!-- LINKS TO STORE SECTIONS -->
-                <ul class="col-4 col-flex">
-                    <li><a href="#">Donna</a></li>
-                    <li><a href="#">Uomo</a></li>
-                    <li><a href="#">Bambini</a></li>
-                </ul>
-                <!-- LOGO -->
-                <div class="col=4">
-                    <a href=""><img src="/img/boolean-logo.png" alt="Logo boolean" class="logo"></a>
-                </div>
-                <!-- STORE NAV -->
-                <ul class="col=4 col-flex">
-                    <li><a href="#">&#9825;</a></li>
-                    <li><a href="#">&#128100;</a></li>
-                    <li><a href="#">&#128717;</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="page-content">
+<main class="page-content">
         <section class="content-section">
                 <!-- PRODUCTS LIST -->
             <div class="container">
@@ -143,33 +118,5 @@
             </div>
         </section>
     </main>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div  class="legal-info">
-                    <h3>Boolando s.r.l</h3>
-                    <ul class="nav-menu col-flex">
-                        <li><a href="#">Informazioni legali</a></li>
-                        <li><a href="#">Normativa sulla privacy</a></li>
-                        <li><a href="#">Diritto di recesso</a></li>
-                    </ul>
-                </div>
-                <nav class="footer-nav">
-                    <h5>Trovaci anche su</h5>
-                    <ul class="nav-menu col-flex">
-                        <li><a href="#"><img src="" alt="">🐦</a></li>
-                        <li><a href="#"><img src="" alt="">&#5556;</a></li>
-                        <li><a href="#"><img src="" alt="">&#128247;</a></li>
-                        <li><a href="#"><img src="" alt="">&#42834;</a></li>
-                        <li><a href="#"><img src="" alt="">▶️</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </footer>
 
 </template>
-
-<style scoped>
-
-</style>
