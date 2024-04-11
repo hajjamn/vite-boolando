@@ -13,9 +13,9 @@ export default {
 
   <li class="card col-flex">
     <div class="product">
-      <img :src="/img/{ { item.frontImage } }" alt="" class="product-img">
+      <img :src="`/img/${item.frontImage}`" alt="" class="product-img">
       <div class="overlay">
-        <img :src="/img/{ { item.backImage } }" alt="" class="product-alt-img">
+        <img :src="`/img/${item.backImage}`" alt="" class="product-alt-img">
       </div>
       <div class="favorite">&hearts;</div>
       <ul class="badge-container col-flex">
