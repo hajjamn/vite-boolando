@@ -26,3 +26,35 @@
     </footer>
 
 </template>
+
+<style>
+
+.page-footer {
+    padding: 30px 0;
+}
+
+.page-footer .row {
+    justify-content: space-between;
+}
+
+:is(.footer-nav, .legal-info) > * {
+    padding: 4px 0;
+}
+
+.page-footer ul > li {
+    padding: 0 4px;
+} /* Questo avrei potuto unirlo alla linea che fa la stessa cosa nell'header ma non volevo creare confusione nel css */
+
+.footer-nav {
+    text-align: center;
+}
+
+.page-footer h3 {
+    font-size: 20px;
+}
+
+.page-footer h5 {
+    font-size: 14px;
+}
+
+</style>

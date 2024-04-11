@@ -41,3 +41,29 @@ export default {
     </header>
 
 </template>
+
+<style>
+
+.page-header {
+    padding: 10px 0;
+}
+
+.page-header .row {
+    justify-content: space-between;
+    align-items: center
+}
+
+.page-header .col-flex {
+    justify-items: center;
+    align-items: center;
+}
+
+.logo {
+    max-height: 25px;
+}
+
+.page-header ul > li {
+    padding: 0 4px;
+}
+
+</style>
