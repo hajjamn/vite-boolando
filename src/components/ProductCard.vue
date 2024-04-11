@@ -3,6 +3,18 @@
 export default {
   props: {
     item: Object
+  },
+  computed: {
+    discountedPrice() {
+      const foundDiscount = this.item.badges.find(({ type }) => type === 'discount')
+      const discountValue = foundDiscount.value
+      const discountPercentage = discountValue.replace('%' , '').replace('-','');
+      const discountedPercentage = 100 - discountPercentage;
+      return (this.item.price * (discountedPercentage / 100)).toFixed(2);
+    }
+  },
+  mounted() {
+    console.log(this.discountedPrice)
   }
 }
 
@@ -29,7 +41,7 @@ export default {
           <p>{{ item.brand }}</p>
         </a></li>
       <li class="product-name"><a href="#">{{ item.name }}</a></li>
-      <li class="price"><span class="after-disc">{{ item.price + parseFloat(item.discount) }} &euro; </span><span
+      <li class="price"><span class="after-disc">{{ this.discountedPrice }} &euro; </span><span
           class="before-disc">{{
             item.price
           }}&euro;</span></li>
