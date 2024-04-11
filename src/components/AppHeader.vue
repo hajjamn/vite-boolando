@@ -4,6 +4,9 @@ export default {
     return {
       menuItems: [
         'Donna', 'Uomo', 'Bambino'
+      ],
+      menuIcons: [
+        '&#9825;', '&#128100;', '&#128717;'
       ]
     }
   }
@@ -28,9 +31,10 @@ export default {
                 </div>
                 <!-- STORE NAV -->
                 <ul class="col=4 col-flex">
-                    <li><a href="#">&#9825;</a></li>
+<!--                     <li><a href="#">&#9825;</a></li>
                     <li><a href="#">&#128100;</a></li>
-                    <li><a href="#">&#128717;</a></li>
+                    <li><a href="#">&#128717;</a></li> -->
+                    <li v-for="icon in menuIcons " ><a href="#" v-html="icon"></a></li>
                 </ul>
             </nav>
         </div>
