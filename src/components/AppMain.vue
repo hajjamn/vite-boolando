@@ -178,7 +178,7 @@ import ProductCard from './ProductCard.vue';
   background-color: white;
 }
 
-.product:hover .favorite {
+.product .favorite .selected{
   color: red;
 }
 
