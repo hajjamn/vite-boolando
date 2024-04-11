@@ -23,7 +23,7 @@ export default {
 <!--                     <li><a href="#">Donna</a></li>
                     <li><a href="#">Uomo</a></li>
                     <li><a href="#">Bambini</a></li> -->
-                    <li v-for="item in menuItems"><a href="#">{{ item }}</a></li>
+                    <li v-for="(item, i) in menuItems" :key="i" ><a href="#">{{ item }}</a></li>
                 </ul>
                 <!-- LOGO -->
                 <div class="col=4">
@@ -34,7 +34,7 @@ export default {
 <!--                     <li><a href="#">&#9825;</a></li>
                     <li><a href="#">&#128100;</a></li>
                     <li><a href="#">&#128717;</a></li> -->
-                    <li v-for="icon in menuIcons " ><a href="#" v-html="icon"></a></li>
+                    <li v-for="(icon, i) in menuIcons " :key="i" ><a href="#" v-html="icon"></a></li>
                 </ul>
             </nav>
         </div>
