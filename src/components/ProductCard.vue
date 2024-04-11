@@ -1,0 +1,39 @@
+<script>
+
+export default {
+  props: {
+    item: Object
+  }
+}
+
+</script>
+
+
+<template>
+
+  <li class="card col-flex">
+    <div class="product">
+      <!--       <img :src="/img/{ { item.frontImage } }" alt="" class="product-img">
+      <div class="overlay">
+        <img :src="/img/{ { item.backImage } }" alt="" class="product-alt-img">
+      </div> -->
+      <div class="favorite">&hearts;</div>
+      <ul class="badge-container col-flex">
+        <li v-for="badge in item.badges" class="badge" :class="badge.type">
+          <p>{{ badge.value }}</p>
+        </li>
+      </ul>
+    </div>
+    <ul class="product-info">
+      <li class="product-brand"><a href="#">
+          <p>{{ item.price }}€</p>
+        </a></li>
+      <li class="product-name"><a href="#">{{ item.name }}</a></li>
+      <li class="price"><span class="after-disc">14,99 &euro; </span><span class="before-disc">29,99
+          &euro;</span></li>
+    </ul>
+  </li>
+
+</template>
+
+<style></style>

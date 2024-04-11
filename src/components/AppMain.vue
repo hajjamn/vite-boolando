@@ -1,9 +1,12 @@
 <script>
 
 export default {
+  components: {
+    ProductCard
+  },
   data() {
     return {
-      "products": [
+      products: [
         {
           "id": 1,
           "frontImage": "1.webp",
@@ -109,7 +112,9 @@ export default {
       ]
     }
   }
-}
+};
+
+import ProductCard from './ProductCard.vue';
 
 </script>
 
@@ -120,146 +125,9 @@ export default {
     <section class="content-section">
       <!-- PRODUCTS LIST -->
       <div class="container">
-        <ul class="row">
-          <!-- PRODUCT 1 -->
-          <li class="card col-flex">
-            <div class="product">
-              <img src="/img/1.webp" alt="" class="product-img">
-              <div class="overlay">
-                <img src="/img/1b.webp" alt="" class="product-alt-img">
-              </div>
-              <div class="favorite">&hearts;</div>
-              <ul class="badge-container col-flex">
-                <li class="badge discount">
-                  <p>-50%</p>
-                </li>
-                <li class="badge sustainable">
-                  <p>Sostenibilità</p>
-                </li>
-              </ul>
-            </div>
-            <ul class="product-info">
-              <li class="product-brand"><a href="#">
-                  <p>Levi's</p>
-                </a></li>
-              <li class="product-name"><a href="#">RELAXED FIT TEE UNISEX</a></li>
-              <li class="price"><span class="after-disc">14,99 &euro; </span><span class="before-disc">29,99
-                  &euro;</span></li>
-            </ul>
-          </li>
-          <!-- PRODUCT 2 -->
-          <li class="card col-flex">
-            <div class="product">
-              <img src="/img/2.webp" alt="" class="product-img">
-              <div class="overlay">
-                <img src="/img/2b.webp" alt="" class="product-alt-img">
-              </div>
-              <div class="favorite">&hearts;</div>
-              <ul class="badge-container col-flex">
-                <li class="badge discount">
-                  <p>-30%</p>
-                </li>
-              </ul>
-            </div>
-            <ul class="product-info">
-              <li class="product-brand"><a href="#">
-                  <p>Guess</p>
-                </a></li>
-              <li class="product-name"><a href="#">ROSES TEE</a></li>
-              <li class="price"><span class="after-disc">20,99 &euro; </span><span class="before-disc">29,99
-                  &euro;</span></li>
-            </ul>
-          </li>
-          <!-- PRODUCT 3 -->
-          <li class="card col-flex">
-            <div class="product">
-              <img src="/img/3.webp" alt="" class="product-img">
-              <div class="overlay">
-                <img src="/img/3b.webp" alt="" class="product-alt-img">
-              </div>
-              <div class="favorite">&hearts;</div>
-              <ul class="badge-container col-flex">
-                <li class="badge discount">
-                  <p>-30%</p>
-                </li>
-              </ul>
-            </div>
-            <ul class="product-info">
-              <li class="product-brand"><a href="#">
-                  <p>Come Zucchero Filato</p>
-                </a></li>
-              <li class="product-name"><a href="#">VOGLIA DI COLORI PASTELLO</a></li>
-              <li class="price"><span class="after-disc">129,99 &euro; </span><span class="before-disc">184,99
-                  &euro;</span></li>
-            </ul>
-          </li>
-          <!-- PRODUCT 4 -->
-          <li class="card col-flex">
-            <div class="product">
-              <img src="/img/4.webp" alt="" class="product-img">
-              <div class="overlay">
-                <img src="/img/4b.webp" alt="" class="product-alt-img">
-              </div>
-              <div class="favorite">&hearts;</div>
-              <ul class="badge-container col-flex">
-                <li class="badge discount">
-                  <p>-50%</p>
-                </li>
-                <li class="badge sustainable">
-                  <p>Sostenibilità</p>
-                </li>
-              </ul>
-            </div>
-            <ul class="product-info">
-              <li class="product-brand"><a href="#">
-                  <p>Levi's</p>
-                </a></li>
-              <li class="product-name"><a href="#">TEE UNISEX</a></li>
-              <li class="price"><span class="after-disc">14,99 &euro; </span><span class="before-disc">29,99
-                  &euro;</span></li>
-            </ul>
-          </li>
-          <!-- PRODUCT 5 -->
-          <li class="card col-flex">
-            <div class="product">
-              <img src="/img/5.webp" alt="" class="product-img">
-              <div class="overlay">
-                <img src="/img/5b.webp" alt="" class="product-alt-img">
-              </div>
-              <div class="favorite">&hearts;</div>
-              <ul class="badge-container col-flex">
-              </ul>
-            </div>
-            <ul class="product-info">
-              <li class="product-brand"><a href="#">
-                  <p>Maya Deluxe</p>
-                </a></li>
-              <li class="product-name"><a href="#">STRIP BODICE</a></li>
-              <li class="price"><span class="after-disc">99,99 &euro;</span><span class="before-disc"></span></li>
-            </ul>
-          </li>
-          <!-- PRODUCT 6 -->
-          <li class="card col-flex">
-            <div class="product">
-              <img src="/img/6.webp" alt="" class="product-img">
-              <div class="overlay">
-                <img src="/img/6b.webp" alt="" class="product-alt-img">
-              </div>
-              <div class="favorite">&hearts;</div>
-              <ul class="badge-container col-flex">
-                <li class="badge sustainable">
-                  <p>Sostenibilità</p>
-                </li>
-              </ul>
-            </div>
-            <ul class="product-info">
-              <li class="product-brand"><a href="#">
-                  <p>Esprit</p>
-                </a></li>
-              <li class="product-name"><a href="#">MAGLIONE - BLACK</a></li>
-              <li class="price"><span class="after-disc">29,99 &euro;</span><span class="before-disc"></span></li>
-            </ul>
-          </li>
+        <ul v-if="products.length !== 0" class="row">
+          <!-- PRODUCTS -->
+          <ProductCard v-for="product in products" :item="product" :key="product.id"></ProductCard>
         </ul>
       </div>
     </section>
