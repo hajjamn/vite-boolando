@@ -33,7 +33,7 @@ export default {
       <div class="overlay">
         <img :src="`/img/${item.backImage}`" alt="" class="product-alt-img">
       </div>
-      <div class="favorite">&hearts;</div>
+      <div class="favorite" :class="item.isInFavorites === true ? 'isInFavorites' : '' " @click="item.isInFavorites = !item.isInFavorites">&hearts;</div>
       <ul class="badge-container col-flex">
         <li v-for="badge in item.badges" class="badge" :class="badge.type">
           <p>{{ badge.value }}</p>

@@ -167,6 +167,7 @@ import ProductCard from './ProductCard.vue';
 }
 
 .product .favorite {
+  cursor: pointer;
   position: absolute;
   top: 10px;
   right: 0;
@@ -176,9 +177,10 @@ import ProductCard from './ProductCard.vue';
   font-size: 30px;
   text-align: center;
   background-color: white;
+  user-select: none;
 }
 
-.product .favorite .selected{
+.product .favorite.isInFavorites {
   color: red;
 }
 
