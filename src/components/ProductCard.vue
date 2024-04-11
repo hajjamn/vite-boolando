@@ -7,14 +7,18 @@ export default {
   computed: {
     discountedPrice() {
       const foundDiscount = this.item.badges.find(({ type }) => type === 'discount')
-      const discountValue = foundDiscount.value
-      const discountPercentage = discountValue.replace('%' , '').replace('-','');
-      const discountedPercentage = 100 - discountPercentage;
-      return (this.item.price * (discountedPercentage / 100)).toFixed(2);
+      if (foundDiscount !== undefined ) {
+        const discountValue = foundDiscount.value
+        const discountPercentage = discountValue.replace('%' , '').replace('-','');
+        const discountedPercentage = 100 - discountPercentage;
+        return (this.item.price * (discountedPercentage / 100)).toFixed(2);
+      } else {
+        return this.item.price
+      }
     }
   },
   mounted() {
-    console.log(this.discountedPrice)
+    console.log(this.item.badges)
   }
 }
 
@@ -41,8 +45,8 @@ export default {
           <p>{{ item.brand }}</p>
         </a></li>
       <li class="product-name"><a href="#">{{ item.name }}</a></li>
-      <li class="price"><span class="after-disc">{{ this.discountedPrice }} &euro; </span><span
-          class="before-disc">{{
+      <li class="price"><span class="after-disc" :class="this.discountedPrice === item.price ? 'd-none' : 'after-disc' ">{{ this.discountedPrice }} &euro; </span><span
+        :class="this.discountedPrice === item.price ? '' : 'before-disc' ">{{
             item.price
           }}&euro;</span></li>
     </ul>

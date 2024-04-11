@@ -94,7 +94,7 @@ export default {
             }
           ]
         },
-/*         {
+        {
           "id": 6,
           "frontImage": "6.webp",
           "backImage": "6b.webp",
@@ -108,7 +108,7 @@ export default {
               "value": "Sostenibilità"
             }
           ]
-        } */
+        }
       ]
     }
   }
