@@ -6,12 +6,13 @@ export default {
   },
   data() {
     return {
-      products: db.products
+      products: store.products
     }
   }
 };
 
-import db from '../data/db.json'
+/* import db from '../data/db.json' */
+import {store} from '../store.js'
 import ProductCard from './ProductCard.vue';
 
 </script>
