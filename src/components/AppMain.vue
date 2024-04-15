@@ -6,13 +6,13 @@ export default {
   },
   data() {
     return {
-      products: store.products
+      store: store
     }
   }
 };
 
 /* import db from '../data/db.json' */
-import {store} from '../store.js'
+import { store } from '../store.js'
 import ProductCard from './ProductCard.vue';
 
 </script>
@@ -24,9 +24,9 @@ import ProductCard from './ProductCard.vue';
     <section class="content-section">
       <!-- PRODUCTS LIST -->
       <div class="container">
-        <ul v-if="products.length !== 0" class="row">
+        <ul v-if="store.products.length !== 0" class="row">
           <!-- PRODUCTS -->
-          <ProductCard v-for="product in products" :item="product" :key="product.id"></ProductCard>
+          <ProductCard v-for="product in store.products" :item="product" :key="product.id"></ProductCard>
         </ul>
       </div>
     </section>
